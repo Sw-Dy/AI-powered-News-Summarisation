@@ -1,27 +1,6 @@
-<a name="readme-top"></a>
-<br />
-<div align="center">
-  <img src="https://github.com/Oxlac/AI-News-Summariser/assets/73121234/35981902-47c3-4143-ad88-6ff1100e9c64" alt="Logo" width="200" height="200">
-  <h3 align="center">AI-News-Summariser</h3>
-  <p align="center">
-    A tool for automatically summarizing news articles using artificial intelligence.
-    <br />
-    <a href="https://aisummariser.oxlac.com">Visit the Website »</a>
-    <br />
-    <br />
-    <a href="https://www.aadinagarajan.com/#contact">Contact Developer</a>
-    ·
-    <a href="https://github.com/Oxlac/AI-News-Summariser/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Oxlac/AI-News-Summariser/issues">Request Feature</a>
-    .
-    <a href="https://discord.gg/x3ba4sTzgd">Discord Support</a>
-  </p>
-</div>
+
 
 ## About The Project
-
-![AI-News-Summariser Screen Shot](image.png)
 
 AI-News-Summariser is an end-to-end summarization system for news articles and uploaded files. It provides:
 
@@ -639,16 +618,16 @@ The visualization folder generates terminal-only comparison charts that summariz
 ### Key Visualizations (Important Outputs)
 
 - Quality, efficiency, and energy comparisons:
-  - `visualization/outputs/compare_quality_overall.png`
-  - `visualization/outputs/compare_efficiency_score.png`
-  - `visualization/outputs/compare_energy_kwh.png`
-  - `visualization/outputs/compare_carbon_kg.png`
+  - [compare_quality_overall.png](visualization/outputs/compare_quality_overall.png)
+  - [compare_efficiency_score.png](visualization/outputs/compare_efficiency_score.png)
+  - [compare_energy_kwh.png](visualization/outputs/compare_energy_kwh.png)
+  - [compare_carbon_kg.png](visualization/outputs/compare_carbon_kg.png)
 - Model behavior by input size:
-  - `visualization/outputs/scenario_quality_by_size.png`
-  - `visualization/outputs/scenario_latency_by_size.png`
+  - [scenario_quality_by_size.png](visualization/outputs/scenario_quality_by_size.png)
+  - [scenario_latency_by_size.png](visualization/outputs/scenario_latency_by_size.png)
 - Quality trade-offs:
-  - `visualization/outputs/scatter_quality_latency.png`
-  - `visualization/outputs/scatter_quality_energy.png`
+  - [scatter_quality_latency.png](visualization/outputs/scatter_quality_latency.png)
+  - [scatter_quality_energy.png](visualization/outputs/scatter_quality_energy.png)
 
 ### Summary of Observations (Captured in Scenario Charts)
 
@@ -716,12 +695,8 @@ Contributions are welcome. Ensure that code passes the ruff linter before submit
 
 Distributed under the MIT License. See LICENSE.txt for more information.
 
-## Contact
+## Developer
 
-Your Name - [@Oxlac_](https://twitter.com/Oxlac_) - contact@oxlac.com
+Developer: You
 
-Discord Server - [https://discord.gg/2YdnSGHdET](https://discord.gg/2YdnSGHdET)
 
-Project Link: [https://github.com/Oxlac/AI-News-Summariser](https://github.com/oxlac/mr.dm)
-
-Developer: [Aadityaa Nagarajan](https://aadinagarajan.com)
