@@ -1,0 +1,10 @@
+{
+  "dataset_name": "cnn_dailymail",
+  "dataset_version": "3.0.0",
+  "dataset_path": "data/hf_datasets/cnn_dailymail_3.0.0",
+  "output_dir": "outputs/cnn_dm_extractive",
+  "max_train_samples": 5000,
+  "max_features": 50000,
+  "min_df": 2,
+  "max_sentences": 5
+}

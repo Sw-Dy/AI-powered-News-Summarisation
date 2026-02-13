@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dark-theme.css') }}" id="theme-style">
+  </head>
+  <body>
+    <div class="top-actions">
+      <a class="settings-link" href="/">Summarizer</a>
+      <a class="settings-link" href="/settings">Settings</a>
+    </div>
+    <h2 class="sub-heading">AI Powered</h2>
+    <h1 class="heading">History</h1>
+    <div class="theme-switch-wrapper">
+      <span>Change Theme</span>
+      <label class="theme-switch" for="theme-toggle">
+        <input type="checkbox" id="theme-toggle" onchange="toggleTheme()" />
+        <div class="slider round"></div>
+      </label>
+    </div>
+    <section class="content" id="historySection">
+      <div class="card">
+        <p class="heading">History</p>
+        <div class="history-layout">
+          <div id="historyList" class="history-list"></div>
+          <div id="historyDetail" class="history-detail is-hidden">
+            <p class="history-title" id="historyDetailTitle"></p>
+            <p class="history-meta" id="historyDetailMeta"></p>
+            <a class="history-link" id="historyDetailUrl" target="_blank" rel="noopener noreferrer"></a>
+            <p class="history-summary" id="historyDetailSummary"></p>
+            <p class="history-sentiment" id="historyDetailSentiment"></p>
+            <p class="history-authors" id="historyDetailAuthors"></p>
+            <p class="history-date" id="historyDetailDate"></p>
+            <pre class="history-settings" id="historyDetailSettings"></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      function toggleTheme() {
+        const themeStyle = document.getElementById('theme-style');
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle.checked) {
+          themeStyle.href = "{{ url_for('static', filename='light-theme.css') }}";
+          localStorage.setItem('theme', 'light');
+        } else {
+          themeStyle.href = "{{ url_for('static', filename='dark-theme.css') }}";
+          localStorage.setItem('theme', 'dark');
+        }
+      }
+      window.addEventListener("load", () => {
+        const themeToggle = document.getElementById('theme-toggle');
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+          themeToggle.checked = true;
+        } else {
+          themeToggle.checked = false;
+        }
+        toggleTheme();
+      });
+    </script>
+    <script type="module" src="{{ url_for('static', filename='history.js') }}"></script>
+  </body>
+</html>

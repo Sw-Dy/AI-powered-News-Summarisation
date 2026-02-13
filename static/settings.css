@@ -1,0 +1,276 @@
+.settings-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+  padding: 20px 40px 60px 40px;
+}
+
+.settings-sidebar {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(28, 30, 39, 0.7);
+  height: fit-content;
+}
+
+.settings-sidebar a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+}
+
+.sidebar-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.settings-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.primary,
+.secondary {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.primary {
+  background: #28ffad;
+  color: #0e1316;
+}
+
+.secondary {
+  background: transparent;
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.save-status {
+  font-size: 13px;
+  color: #9aa4b2;
+}
+
+.settings-section h2 {
+  margin: 0 0 12px 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.settings-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  background: rgba(28, 30, 39, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.settings-card.full {
+  margin-bottom: 16px;
+}
+
+.field-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #9aa4b2;
+}
+
+select,
+input[type="number"] {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: inherit;
+}
+
+.model-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.model-card {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: rgba(14, 19, 22, 0.4);
+}
+
+.model-card input {
+  margin: 0;
+}
+
+.model-card.active {
+  border-color: #28ffad;
+}
+
+.toggle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(28, 30, 39, 0.7);
+}
+
+.toggle.inline {
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+.settings-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.settings-sidebar {
+  position: sticky;
+  top: 20px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(24, 28, 36, 0.95), rgba(12, 16, 22, 0.95));
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+
+.settings-sidebar a {
+  padding: 10px 12px;
+  border-radius: 10px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.settings-sidebar a:hover {
+  background: rgba(40, 255, 173, 0.12);
+  color: #28ffad;
+}
+
+.settings-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 28px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(28, 34, 44, 0.95), rgba(15, 20, 28, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
+}
+
+.settings-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  color: #28ffad;
+  margin: 0 0 8px;
+}
+
+.settings-title {
+  margin: 0 0 10px;
+  font-size: 2rem;
+}
+
+.settings-subtitle {
+  margin: 0;
+  color: #a9b4c3;
+  max-width: 520px;
+}
+
+.settings-actions {
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.primary {
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-weight: 600;
+  box-shadow: 0 14px 30px rgba(40, 255, 173, 0.25);
+}
+
+.secondary {
+  border-radius: 12px;
+  padding: 12px 20px;
+}
+
+.settings-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.settings-card {
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+}
+
+.field-label {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+select,
+input[type="number"] {
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.model-card {
+  border-radius: 14px;
+  padding: 14px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.model-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(40, 255, 173, 0.7);
+}
+
+.toggle {
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900px) {
+  .settings-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dark-theme.css') }}" id="theme-style">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='settings.css') }}">
+  </head>
+  <body>
+    <div class="top-actions">
+      <a class="settings-link" href="/">Back to Summarizer</a>
+    </div>
+    <div class="settings-layout">
+      <aside class="settings-sidebar">
+        <div class="sidebar-title">Settings</div>
+        <a href="#general">General</a>
+        <a href="#models">Models</a>
+        <a href="#output">Output</a>
+        <a href="#analysis">Analysis</a>
+        <a href="#performance">Performance</a>
+        <a href="#extension">Extension</a>
+      </aside>
+      <main class="settings-content">
+        <div class="settings-hero">
+          <div>
+            <p class="settings-eyebrow">Workspace</p>
+            <h1 class="settings-title">Settings</h1>
+            <p class="settings-subtitle">Fine-tune summarization, models, and analysis with a clean professional control panel.</p>
+          </div>
+        </div>
+        <div class="settings-actions">
+          <button id="saveSettings" class="primary">Save</button>
+          <button id="resetSettings" class="secondary">Reset to Defaults</button>
+          <span id="saveStatus" class="save-status"></span>
+        </div>
+        <section id="general" class="settings-section">
+          <h2>General</h2>
+          <div class="card-grid">
+            <div class="settings-card">
+              <label class="field-label" title="Controls how long the summary is">Summary Length</label>
+              <select id="summaryLength">
+                <option value="short">Short</option>
+                <option value="medium">Medium</option>
+                <option value="long">Long</option>
+              </select>
+            </div>
+            <div class="settings-card">
+              <label class="field-label" title="How the summary is presented">Output Format</label>
+              <select id="outputFormat">
+                <option value="paragraph">Paragraph</option>
+                <option value="bullets">Bullets</option>
+                <option value="tldr">TL;DR</option>
+              </select>
+            </div>
+            <div class="settings-card">
+              <label class="field-label" title="Language tone for summaries">Language Style</label>
+              <select id="languageStyle">
+                <option value="simple">Simple</option>
+                <option value="neutral">Neutral</option>
+                <option value="technical">Technical</option>
+              </select>
+            </div>
+          </div>
+        </section>
+        <section id="models" class="settings-section">
+          <h2>Models</h2>
+          <div class="settings-card full">
+            <div class="field-label" title="Primary model for summarization">Default Summarization Model</div>
+            <div id="defaultModelCards" class="model-cards"></div>
+          </div>
+          <div class="settings-card full">
+            <div class="field-label" title="Fallback model when primary fails">Optional Fallback Model</div>
+            <div id="fallbackModelCards" class="model-cards"></div>
+          </div>
+        </section>
+        <section id="output" class="settings-section">
+          <h2>Output</h2>
+          <div class="card-grid">
+            <div class="settings-card">
+              <label class="field-label" title="Maximum characters sent to the model">Max Input Length</label>
+              <input id="maxInputLength" type="number" min="1000" step="500">
+            </div>
+            <div class="settings-card">
+              <label class="field-label" title="Chunk size for long articles">Chunk Size</label>
+              <input id="chunkSize" type="number" min="500" step="250">
+            </div>
+          </div>
+        </section>
+        <section id="analysis" class="settings-section">
+          <h2>Analysis</h2>
+          <div class="toggle-grid">
+            <label class="toggle">
+              <input type="checkbox" id="keyPhrases">
+              <span>Key Phrases</span>
+            </label>
+            <label class="toggle">
+              <input type="checkbox" id="namedEntities">
+              <span>Named Entities</span>
+            </label>
+            <label class="toggle">
+              <input type="checkbox" id="sentiment">
+              <span>Sentiment Analysis</span>
+            </label>
+            <label class="toggle">
+              <input type="checkbox" id="readability">
+              <span>Readability Score</span>
+            </label>
+            <label class="toggle">
+              <input type="checkbox" id="questionAnswering">
+              <span>Question Answering</span>
+            </label>
+          </div>
+        </section>
+        <section id="performance" class="settings-section">
+          <h2>Performance</h2>
+          <div class="card-grid">
+            <div class="settings-card">
+              <label class="field-label" title="Stream tokens for faster perceived output">Streaming Output</label>
+              <label class="toggle inline">
+                <input type="checkbox" id="streaming">
+                <span>Enable</span>
+              </label>
+            </div>
+          </div>
+        </section>
+        <section id="extension" class="settings-section">
+          <h2>Extension</h2>
+          <div class="card-grid">
+            <div class="settings-card">
+              <label class="field-label" title="Keep the popup compact">Compact Mode</label>
+              <label class="toggle inline">
+                <input type="checkbox" id="compactMode">
+                <span>Enable</span>
+              </label>
+            </div>
+            <div class="settings-card">
+              <label class="field-label" title="Always generate short summaries in extension">Short Summary Only</label>
+              <label class="toggle inline">
+                <input type="checkbox" id="shortSummaryOnly">
+                <span>Enable</span>
+              </label>
+            </div>
+            <div class="settings-card">
+              <label class="field-label" title="Offer deep link to web app">Deep Link</label>
+              <label class="toggle inline">
+                <input type="checkbox" id="deepLink">
+                <span>Enable</span>
+              </label>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="{{ url_for('static', filename='settings.js') }}"></script>
+  </body>
+</html>
