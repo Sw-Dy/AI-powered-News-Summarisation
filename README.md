@@ -11,8 +11,6 @@ AI-News-Summariser is an end-to-end summarization system for news articles and u
 - A browser extension that can summarize the current page via the local API.
 - A video/audio pipeline that transcribes media and summarizes the transcription.
 
->[!CAUTION]
->Ensure that you use this tool responsibly. Respect the copyrights and terms of use of the news sources.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -695,8 +693,6 @@ Contributions are welcome. Ensure that code passes the ruff linter before submit
 
 Distributed under the MIT License. See LICENSE.txt for more information.
 
-## Developer
 
-Developer: You
 
 
